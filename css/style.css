@@ -1,0 +1,139 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --index: calc(1vw + 1vh)
+}
+@font-face{
+    font-family: desert_f;
+    src: url();
+    font-weight: 900;
+}
+body
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #010101;
+    color: rgb(255, 252, 252);
+    font-family: desert_f, sans-serif;
+    line-height: 1.55;
+}
+.layers__header
+{
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 1000;
+    transform: translate3d(0, calc(var(--scrollTop)*1.1), 0);
+    will-change: transform;
+    color: #ffffe8;
+    text-shadow: 0 0 5px;
+}
+.bottom__section
+{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.layers__caption
+{
+    font-size: calc(var(--index)*1.5);
+    letter-spacing: calc(var(--index)/100);
+}
+.layers__title
+{
+    font-size: calc(var(--index)*2);
+    letter-spacing: calc(var(--index)/100);
+}
+.layers
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.layer
+{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+.sun
+{
+    transform: translate3d(0, calc(var(--scrollTop)), 0);
+    z-index: 0;
+}
+.pyramid1, .pyramid2, .pyramid3
+{
+    transform: translate3d(0, calc(var(--scrollTop)/1.2), 0);
+    z-index: 0;
+}
+.p1
+{
+    transform: translate3d(0, calc(190/1.2)px, 0);
+}
+.desert1
+{
+    transform: translate3d(0, calc(var(--scrollTop)/2.5), 0);
+    z-index: 2;
+}
+.ds1
+{
+    transform: translate3d(0, 13.5vh, 0);
+    z-index: 2;
+}
+.desert2
+{
+    transform: translate3d(0, calc(var(--scrollTop)/15), 0);
+    z-index: 3;
+}
+#txt
+{
+    padding: 0 100px;
+}
+.preloader
+{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    background-color: black;
+    color: white;
+
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-weight: 1000;
+    color: #ffffe8;
+    text-shadow: 0 0 5px;
+    font-size: calc(var(--index)*2);
+    letter-spacing: calc(var(--index)/100);
+}
+.l
+{
+    position: absolute;
+    margin-top: calc(height) * -1;
+}
+.loaded
+{
+    overflow-y: scroll;
+}
+.title1, .caption1{
+    transform: translate3d(0, calc(var(--scrollTop)*-1.1), 0);
+}
