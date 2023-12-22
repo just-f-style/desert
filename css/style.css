@@ -13,9 +13,6 @@
     src: url();
     font-weight: 900;
 }
--webkit-scrollbar {
-  width: 0;
-}
 body
 {
     overflow-x: hidden;
@@ -137,6 +134,9 @@ body
 {
     overflow-y: scroll;
 }
+::-webkit-scrollbar { 
+    width : 0 !important /* Webkit */
+} 
 .title1, .caption1{
     transform: translate3d(0, calc(var(--scrollTop)*-1.1), 0);
 }
