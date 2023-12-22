@@ -13,7 +13,7 @@
     src: url();
     font-weight: 900;
 }
-::-webkit-scrollbar {
+-webkit-scrollbar {
   width: 0;
 }
 body
